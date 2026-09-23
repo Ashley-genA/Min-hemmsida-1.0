@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#forest {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.4); /* Ger lite skugga så länkarna syns mot skogen */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: wheat;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    cursor: pointer;
+    background-color: rgb(54, 1, 1);
+    border-radius: 7%;
+    padding: 2px 6px;
+}
+
+
+.hero-sektion {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-sektion h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: wheat;
+}
+
+.hero-sektion h2 {
+    font-size: 20px;
+    color: wheat;
+    font-weight: normal;
+}
+
+.hero-sektion h3 {
+    font-size: 14px;
+    color: wheat;
+}
+
+
+.om-oss-sektion {
+    background-color: white;
+    color: black;
+    padding: 80px 20px;
+    min-height: 100vh;
+}
+
+.om-oss-sektion > h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.TeamCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.TeamCards p {
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    margin-top: 20px;
+    padding: 15px;
+}
+
+#Aleks, #Rakib, #Skydd, #Seb {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    font-size: 16px;
+}
+
+footer p {
+    margin: 8px;
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .TeamCards {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+.dold {
+    display: none !important;
+}
