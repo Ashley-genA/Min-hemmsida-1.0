@@ -4,27 +4,25 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
 #forest {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
     z-index: -1;
 }
 
-
 nav {
     display: flex;
     justify-content: flex-end;
-    padding: 20px;
-    gap: 20px;
-    background-color: rgba(0, 0, 0, 0.4); /* Ger lite skugga så länkarna syns mot skogen */
+    padding: 20px 40px;
+    gap: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 10;
 }
 
 nav a {
@@ -35,11 +33,8 @@ nav a {
 
 nav a:hover {
     cursor: pointer;
-    background-color: rgb(54, 1, 1);
-    border-radius: 7%;
-    padding: 2px 6px;
+    text-decoration: underline;
 }
-
 
 .hero-sektion {
     height: 100vh;
@@ -68,60 +63,62 @@ nav a:hover {
     color: wheat;
 }
 
-
 .om-oss-sektion {
-
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
     color: black;
     padding: 80px 20px;
     min-height: 100vh;
-    display: none; 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow-y: auto;
-    z-index: 100;
-    
-
 }
 
-.om-oss-sektion:target{
-    display:block;
-}
-
-
-.om-oss-sektion h1 {
+.om-oss-sektion > h1 {
     font-size: 30px;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
-
-
 
 .TeamCards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
-    max-width: 1200px;
+    gap: 60px;
+    max-width: 1000px;
     margin: 0 auto;
+}
+
+
+.TeamCards > div {
+    flex: 0 1 42%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    margin-bottom: 30px;
 }
 
-.TeamCards p {
-    background-color: #f0f0f0;
-    border-radius: 4px;
-    margin-top: 20px;
-    padding: 15px;
+.TeamCards h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 
-#Aleks, #Rakib, #Skydd, #Seb {
-    width: 200px;
-    height: 200px;
+.TeamCards img {
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
+    margin-bottom: 15px;
+}
+
+
+.TeamCards p {
+    background-color: #e0e0e0;
+    border-radius: 6px;
+    padding: 15px;
+    font-size: 14px;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
 }
 
 
@@ -130,32 +127,29 @@ footer {
     color: white;
     display: flex;
     justify-content: space-around;
-    padding: 40px;
-    font-size: 16px;
+    padding: 50px 20px;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
-footer p {
-    margin: 8px;
-}
-
-.Ikoner {
-
+footer div {
     display: flex;
-    gap: 10px;
     flex-direction: column;
-
 }
 
-.Ikoner a {
-
+footer p, footer a {
+    margin: 3px 0;
     color: white;
-    font-size: 30px;
+    text-decoration: none;
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-    .TeamCards {
-        flex-direction: row;
-        flex-wrap: wrap;
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .TeamCards > div {
+        flex: 0 1 100%;
     }
 }
 
